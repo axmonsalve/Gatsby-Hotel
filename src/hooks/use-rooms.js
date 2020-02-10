@@ -19,7 +19,15 @@ const useRooms = () => {
             }
         }
     `);
-    console.log(data);
+    
+    return data.allDatoCmsHabitacion.nodes.map(room => ({
+        titulo: room.titulo,
+        id: room.id,
+        contenido: room.contenido,
+        imagen: room.imagen,
+        slug: room.slug
+
+    }))
 }
  
 export default useRooms;

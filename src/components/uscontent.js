@@ -24,6 +24,7 @@ const Content = styled.main`
 
 const UsContent = () => {
 
+    //Query a grapghql para traer los datos de datos-cms
     const result = useStaticQuery(graphql`
         query{
             allDatoCmsPagina(filter: { slug: { eq: "nosotros" }}){
@@ -40,6 +41,7 @@ const UsContent = () => {
         }
     `);
 
+    //Destructuring del resultado del query de graphql
     const { titulo, contenido, imagen } = result.allDatoCmsPagina.nodes[0];
 
     return ( 

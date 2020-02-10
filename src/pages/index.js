@@ -22,7 +22,6 @@ const RoomsList = styled.ul`
 const IndexPage = () => {
   //Hacemos uso del hook
   const rooms = useRooms();
-  console.log(rooms);
   return (
     <Layout>
       <ImageHotel />
